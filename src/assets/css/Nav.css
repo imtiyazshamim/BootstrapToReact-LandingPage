@@ -1,0 +1,215 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(40, 58, 90, 0.9) !important;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff !important;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff !important;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+  color: inherit !important; /* Ensure icons inherit the text color */
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: #47b2e4 !important;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff !important;
+  font-size: 14px;
+  border: 2px solid #47b2e4 !important;
+  font-weight: 600;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  background: #31a9e1 !important;
+}
+
+.navbar .dropdown ul {
+  display: none; /* Initially hidden */
+  position: absolute;
+  left: 14px;
+  /* top: calc(100% + 30px); */
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff !important;
+  box-shadow: 0 0 30px rgba(127, 137, 161, 0.25) !important;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown:hover > ul,
+.navbar-mobile .dropdown > .dropdown-active {
+  opacity: 1;
+  visibility: visible;
+  display: block; /* Show dropdown on hover or when active in mobile */
+  min-height: 290px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #0c3c53 !important;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
+  color: #47b2e4 !important;
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation 
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+  color: #fff !important;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .navbar .getstarted,
+.navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin: 15px;
+  border-radius: 50px;
+  color: #37517e !important;
+  font-size: 14px;
+  border: 2px solid #47b2e4 !important;
+  font-weight: 600;
+}
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul,
+  .navbar-mobile ul {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block !important;
+    position: fixed !important;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(40, 58, 90, 0.9) !important;
+    transition: 0.3s;
+    z-index: 999;
+  }
+
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff !important;
+    overflow-y: auto;
+  }
+
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    color: #37517e !important;
+  }
+
+  .navbar-mobile a:hover,
+  .navbar-mobile .active,
+  .navbar-mobile li:hover > a {
+    color: #47b2e4 !important;
+  }
+
+  
+}
+
+i.bi.mobile-nav-toggle.bi-x {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.nav1{position: relative; top:5px;}

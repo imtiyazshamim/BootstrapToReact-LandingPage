@@ -1,0 +1,12 @@
+.icon-blue {
+    font-size: 20px;
+    color: #47b2e4;
+    line-height: 1;
+  }
+  
+
+  ul.no-bullet {
+    list-style-type: none;
+    padding-left: 0px;
+    position: relative;
+}
